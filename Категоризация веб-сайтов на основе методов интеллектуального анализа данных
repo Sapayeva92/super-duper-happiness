@@ -1,0 +1,50 @@
+python
+import random
+
+# Функция оценки пригодности категории
+def evaluate_category(category):
+    # Реализуйте здесь ваш код для оценки пригодности категории
+    # Верните численную оценку
+
+# Генерация начальной популяции категорий
+def generate_initial_population(population_size):
+    population = []
+    for _ in range(population_size):
+        category = []
+        # Создание случайной категории
+        # Реализуйте здесь ваш код для создания случайной категории
+        population.append(category)
+    return population
+
+# Основной генетический алгоритм
+def genetic_algorithm(population_size, num_generations):
+    population = generate_initial_population(population_size)
+    for generation in range(num_generations):
+        # Оценка пригодности каждой категории в популяции
+        fitness_scores = []
+        for category in population:
+            fitness_scores.append(evaluate_category(category))
+
+        # Выбор лучших категорий для следующего поколения
+        # Реализуйте здесь ваш код для выбора лучших категорий
+
+        # Применение генетических операторов для создания нового поколения
+        # Реализуйте здесь ваш код для скрещивания и мутации
+
+    # Верните лучшую категорию после всех поколений
+    best_category = population[0]
+    best_fitness = evaluate_category(best_category)
+    for category in population:
+        fitness = evaluate_category(category)
+        if fitness > best_fitness:
+            best_category = category
+            best_fitness = fitness
+    return best_category
+
+# Точка входа в программу
+if __name__ == '__main__':
+    population_size = 50
+    num_generations = 100
+    best_category = genetic_algorithm(population_size, num_generations)
+    print("Лучшая категория: ", best_category)
+```
